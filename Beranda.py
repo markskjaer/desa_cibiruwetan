@@ -120,7 +120,8 @@ st.write("Desa Cibiru Wetan, Kecamatan Cileunyi, Kabupaten Bandung, Jawa Barat")
 
 datadesa2 = pd.DataFrame(datadesa.iloc[12:18,0:2])                       #convert ke panda df
 desa2 = datadesa2.style.hide(axis=0).hide(axis=1)                        #menyembunyikan header dan nomor tabel
-st.write(desa2.to_html(),unsafe_allow_html=True,use_container_width=True)         #menyembunyikan nomor tabel dari .to_html sampe True)
+#st.write(desa2.to_html(),unsafe_allow_html=True,use_container_width=True)         #menyembunyikan nomor tabel dari .to_html sampe True) #kode lama per 13-08-2026 su revisi
+st.html(desa.to_html())
 
 st.write("# Kunjungi Kami")
 ig = "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"

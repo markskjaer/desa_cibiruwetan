@@ -105,7 +105,7 @@ with st.sidebar:
 datadesa1 = pd.DataFrame(datadesa.iloc[0:12,0:2])                       #convert ke panda df
 desa = datadesa1.style.hide(axis=0).hide(axis=1)                     #menyembunyikan nomor tabel dan header                                   #menyembunyikan header
 st.image('https://i.ytimg.com/vi/fw8YWKACQ00/maxresdefault.jpg')
-st.write(desa.to_html(),unsafe_allow_html=True,use_container_width=True)         #menyembunyikan nomor tabel dari .to_html sampe True)
+st.write(desa.to_html(),unsafe_allow_html=True)         #menyembunyikan nomor tabel dari .to_html sampe True) #kode lama per 13-08-2026 su revisi (hilangkan ",use_container_width=True")
 
 st.write("# Peta Lokasi Desa Cibiru Wetan")
 mapimage = 'https://www.google.com/maps/vt/data=ZXYT48-fmLw7vEGYqBAWelAfa34jOHxmz4wg8me2i8GFgqBVM8DqF42inRiTkwkiEO5Ev9VeTOmWNwKyGW8xgj8VsclxjChGnOqXTjpZ1f3y_7H5Qq7P9BYST4nGLG1tkm32T0C7Zem8Azyk7WaIy0isvhrG4dsX8GccMm1hFQq6eVMK4mICuCk2IbaiybMbF7EbHVtURq7C19E7jMT9JL6VHUudZs8UfBs5xcEzfMBnkx2KRh1ug6bkxGHCjrYao4EaI_mOLko0BOMYoOlFqGtLwbUFjJ_DACUAxTXBOx0fciiD'
@@ -120,8 +120,7 @@ st.write("Desa Cibiru Wetan, Kecamatan Cileunyi, Kabupaten Bandung, Jawa Barat")
 
 datadesa2 = pd.DataFrame(datadesa.iloc[12:18,0:2])                       #convert ke panda df
 desa2 = datadesa2.style.hide(axis=0).hide(axis=1)                        #menyembunyikan header dan nomor tabel
-#st.write(desa2.to_html(),unsafe_allow_html=True,use_container_width=True)         #menyembunyikan nomor tabel dari .to_html sampe True) #kode lama per 13-08-2026 su revisi
-st.html(desa.to_html())
+st.write(desa2.to_html(),unsafe_allow_html=True)         #menyembunyikan nomor tabel dari .to_html sampe True) #kode lama per 13-08-2026 su revisi (hilangkan ",use_container_width=True")
 
 st.write("# Kunjungi Kami")
 ig = "https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-instagram-new-circle-512.png"
